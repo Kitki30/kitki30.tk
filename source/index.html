@@ -1,5 +1,7 @@
 ---
 permalink: /
+font_style_link: /kitki30.tk/assets/css/fonts.css
+stylesheet_link: /kitki30.tk/assets/css/root.css
 ---
 <!DOCTYPE HTML>
 <html>
@@ -7,9 +9,9 @@ permalink: /
     <!--Title-->
     <title>Kitki30</title>
     <!--Main css-->
-    <link rel="stylesheet" href="/assets/css/root.css">
+    <link rel="stylesheet" href="{{ page.stylesheet_link | relative_url }}">
     <!--Fonts-->
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="{{ page.font_style_link | relative_url }}">
   </head>
   <body>
     <h1 class="roboto-medium">This is test page for kitki30.tk</h1>

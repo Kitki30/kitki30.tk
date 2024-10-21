@@ -1,7 +1,21 @@
 <head>
   <title>Kitki30</title>
+  <script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
+  defer
+></script>
 </head>
 <body>
+  <script>
+    turnstile.ready(function () {
+    turnstile.render("#turnstile_render", {
+      sitekey: "0x4AAAAAAAD6F431fFonuxQW",
+      callback: function (token) {
+      console.log(`Challenge Success ${token}`);
+    },
+  });
+});
+  </script>
   Complete the captcha if prompted to and press verify
   <form action="https://api.kitki30.tk/oauth/discord/captcha" method="POST">
   <div class="cf-turnstile" data-sitekey="0x4AAAAAAAD6F431fFonuxQW"></div>
